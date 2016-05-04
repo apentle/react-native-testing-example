@@ -1,5 +1,5 @@
 # react-native-testing-example
-An example setups react native testing! http://blog.apentle.com/
+An example setups react native testing! Looking for more details on [this page](http://blog.apentle.com/react-native-testing-component-action/).
 
 ## Clone this repository
 ```bash
