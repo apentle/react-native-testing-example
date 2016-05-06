@@ -4,6 +4,15 @@ node_js:
   - "5.1"
   - "4.2"
 
+before_script:
+  - npm install coveralls --save-dev
+
+script:
+  - npm test -- --coverage
+
+after_script:
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+
 branches:
   only:
     - master
