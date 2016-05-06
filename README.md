@@ -1,4 +1,4 @@
-# react-native-testing-example
+# react-native-testing-example [![Build Status](https://travis-ci.org/apentle/react-native-testing-example.svg?branch=master)](https://travis-ci.org/apentle/react-native-testing-example)
 An example setups react native testing! Looking for more details on [this page](http://blog.apentle.com/react-native-testing-component-action/).
 
 ## Clone this repository
