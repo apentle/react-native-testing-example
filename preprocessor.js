@@ -1,21 +1,21 @@
+/**
+ * https://github.com/facebook/jest/blob/master/packages/babel-jest/src/index.js
+ */
+
 'use strict';
 
 const babel = require('babel-core');
-const jest = require('babel-preset-jest');
-const es2015 = require('babel-preset-es2015');
-const react = require('babel-preset-react');
+const jestPreset = require('babel-preset-jest');
+const es2015Preset = require('babel-preset-es2015');
+const reactPreset = require('babel-preset-react');
 
 module.exports = {
-  process(src, file) {
-    if (babel.util.canCompile(file)) {
+  process(src, filename) {
+    if (babel.util.canCompile(filename)) {
       return babel.transform(src, {
         auxiliaryCommentBefore: ' istanbul ignore next ',
-        filename: file,
-        presets: [
-          jest,
-          es2015,
-          react,
-        ],
+        filename,
+        presets: [jestPreset, es2015Preset, reactPreset],
         retainLines: true,
       }).code;
     }
